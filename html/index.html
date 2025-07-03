@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConectaAlmas - Encuentra tu pareja ideal</title>
+    
+    <!-- Google Fonts para un look moderno -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Enlace a nuestra hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== NAVEGACIÓN ==================== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">ConectaAlmas <i class="fas fa-heart"></i></a>
+            
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#hero" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#como-funciona" class="nav__link">Cómo Funciona</a></li>
+                    <li class="nav__item"><a href="#perfiles" class="nav__link">Perfiles</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link btn btn--nav">Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==================== SECCIÓN PRINCIPAL (HERO) ==================== -->
+        <section id="hero" class="hero">
+            <div class="hero__content container">
+                <h1 class="hero__title">Descubre conexiones reales.</h1>
+                <p class="hero__description">
+                    En un mundo lleno de perfiles, te ayudamos a encontrar a la persona que comparte tu misma sintonía.
+                </p>
+                <a href="#perfiles" class="btn btn--primary">¡Empieza tu aventura!</a>
+            </div>
+        </section>
+
+        <!-- ==================== CÓMO FUNCIONA ==================== -->
+        <section id="como-funciona" class="how-works section container">
+            <h2 class="section__title">Tres pasos para encontrar el amor</h2>
+            <div class="how-works__steps">
+                <div class="step animate-on-scroll">
+                    <i class="fas fa-user-plus step__icon"></i>
+                    <h3 class="step__title">1. Crea tu Perfil</h3>
+                    <p class="step__description">Completa tu perfil en minutos. Sube tus mejores fotos y cuéntanos sobre ti.</p>
+                </div>
+                <div class="step animate-on-scroll">
+                    <i class="fas fa-search-location step__icon"></i>
+                    <h3 class="step__title">2. Explora Perfiles</h3>
+                    <p class="step__description">Nuestro algoritmo inteligente te mostrará perfiles compatibles cerca de ti.</p>
+                </div>
+                <div class="step animate-on-scroll">
+                    <i class="fas fa-comments step__icon"></i>
+                    <h3 class="step__title">3. Conecta y Chatea</h3>
+                    <p class="step__description">Si ambos se gustan, ¡es un match! Empieza a chatear y planeen su primera cita.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PERFILES DESTACADOS ==================== -->
+        <section id="perfiles" class="profiles section">
+            <div class="container">
+                <h2 class="section__title">Perfiles que te podrían gustar</h2>
+                <div class="profiles__grid">
+                    <!-- Perfil 1 -->
+                    <div class="profile-card animate-on-scroll">
+                        <img src="https://i.pravatar.cc/300?img=1" alt="Foto de perfil de Sofía" class="profile-card__img">
+                        <div class="profile-card__overlay">
+                            <div class="profile-card__info">
+                                <h3 class="profile-card__name">Sofía, 28</h3>
+                                <p class="profile-card__location">Lima, Perú</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Perfil 2 -->
+                    <div class="profile-card animate-on-scroll">
+                        <img src="https://i.pravatar.cc/300?img=2" alt="Foto de perfil de Mateo" class="profile-card__img">
+                        <div class="profile-card__overlay">
+                             <div class="profile-card__info">
+                                <h3 class="profile-card__name">Mateo, 31</h3>
+                                <p class="profile-card__location">Bogotá, Colombia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Perfil 3 -->
+                    <div class="profile-card animate-on-scroll">
+                        <img src="https://i.pravatar.cc/300?img=3" alt="Foto de perfil de Valentina" class="profile-card__img">
+                        <div class="profile-card__overlay">
+                            <div class="profile-card__info">
+                                <h3 class="profile-card__name">Valentina, 26</h3>
+                                <p class="profile-card__location">Santiago, Chile</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Perfil 4 -->
+                     <div class="profile-card animate-on-scroll">
+                        <img src="https://i.pravatar.cc/300?img=4" alt="Foto de perfil de Lucas" class="profile-card__img">
+                        <div class="profile-card__overlay">
+                            <div class="profile-card__info">
+                                <h3 class="profile-card__name">Lucas, 29</h3>
+                                <p class="profile-card__location">Buenos Aires, Argentina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profiles__cta">
+                    <a href="#" class="btn btn--secondary">Ver más perfiles</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer__content container">
+            <p>© 2024 ConectaAlmas. Todos los derechos reservados.</p>
+            <div class="footer__socials">
+                <a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enlace a nuestro script de JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
