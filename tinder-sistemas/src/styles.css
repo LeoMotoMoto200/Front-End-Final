@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+/* Importamos la fuente global para toda la app */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap');
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
