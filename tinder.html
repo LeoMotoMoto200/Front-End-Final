@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tinder Chat</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: linear-gradient(45deg, #ff6b6b, #ff3d00);
+      color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-header {
+      padding: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+
+    .tab.active {
+      background: white;
+      color: #ff3d00;
+    }
+
+    .chat-list {
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .chat-item {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: background 0.2s;
+    }
+
+    .chat-item:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .chat-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .chat-item-text {
+      flex-grow: 1;
+    }
+
+    /* Chat area */
+    .chat-panel {
+      flex-grow: 1;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      font-weight: bold;
+    }
+
+    .chat-messages {
+      flex-grow: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background: #f9f9f9;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      background: #eee;
+      padding: 10px 15px;
+      border-radius: 20px;
+      max-width: 70%;
+    }
+
+    .message.you {
+      background: #ff6b6b;
+      color: white;
+      align-self: flex-end;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    .chat-input input {
+      flex-grow: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+
+    .chat-input button {
+      padding: 10px 20px;
+      background: #ff3d00;
+      border: none;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* Profile panel */
+    .profile-panel {
+      width: 300px;
+      border-left: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 300px;
+      background: url('https://via.placeholder.com/300x300') center/cover no-repeat;
+    }
+
+    .profile-info {
+      padding: 15px;
+      flex-grow: 1;
+    }
+
+    .profile-info h2 {
+      margin-bottom: 5px;
+    }
+
+    .profile-info p {
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .profile-buttons {
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+      border-top: 1px solid #ddd;
+    }
+
+    .profile-buttons button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-no {
+      background: #ddd;
+    }
+
+    .btn-no:hover {
+      background: #bbb;
+    }
+
+    .btn-yes {
+      background: #ff3d00;
+      color: white;
+    }
+
+    .btn-yes:hover {
+      background: #e53900;
+    }
+
+    @media (max-width: 900px) {
+      .profile-panel {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">🔥 My Profile</div>
+      <div class="tabs">
+        <div class="tab active">Matches</div>
+        <div class="tab">Messages</div>
+      </div>
+      <div class="chat-list">
+        <div class="chat-item">
+          <img src="https://via.placeholder.com/40" alt="Curt">
+          <div class="chat-item-text">
+            <strong>Curt</strong>
+            <div>Duck, duck, goose???</div>
+          </div>
+        </div>
+        <div class="chat-item">
+          <img src="https://via.placeholder.com/40" alt="Shay">
+          <div class="chat-item-text">
+            <strong>Shay</strong>
+            <div>Good afternoon</div>
+          </div>
+        </div>
+        <div class="chat-item">
+          <img src="https://via.placeholder.com/40" alt="Andrew">
+          <div class="chat-item-text">
+            <strong>Andrew</strong>
+            <div>Heya. How's it going?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Panel -->
+    <div class="chat-panel">
+      <div class="chat-header">You matched with Shay on 11/12/2018</div>
+      <div class="chat-messages">
+        <div class="message">Good afternoon</div>
+        <div class="message you">Hi Shay! How are you?</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type a message" />
+        <button>SEND</button>
+      </div>
+    </div>
+
+    <!-- Profile Panel -->
+    <div class="profile-panel">
+      <div class="profile-photo"></div>
+      <div class="profile-info">
+        <h2>Shay, 40</h2>
+        <p>📍 59 miles away</p>
+      </div>
+      <div class="profile-buttons">
+        <button class="btn-no">NO</button>
+        <button class="btn-yes">MATCH</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
